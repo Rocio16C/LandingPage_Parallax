@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
+
+*, 
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #dae2f8;
+}
+
+::selection{
+    background-color: #ce6636b4;
+}
+
+.logo{
+    width: 75px;
+}
+
+header{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    padding: 0.9rem 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+header nav{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.search a{
+    font-size: 1.05rem;
+    padding: 0 5rem;
+}
+
+.hamburguer{
+    padding-left: 1.5rem;
+}
+
+.hamburguer a{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgb(115, 115, 115, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburguer .bar{
+    position: relative;
+    width: 52%;
+    height: 1.3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.hamburguer .bar::before, 
+.hamburguer .bar::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.hamburguer .bar::before{
+    top: -4.5px;
+}
+
+.hamburguer .bar::after{
+    top: 4.5px;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.parallax{
+    pointer-events: none;
+    transition: 0.25s cubic-bezier(0.2,0.49,0.32,0.99);
+}
+
+.fondo-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 135%;
+    height: 142%;
+    z-index: 1;
+}
+
+.one-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 160%;
+    height: 140%;
+}
+
+.two-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.three-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.four-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.text{
+    position: absolute;
+    z-index: 6;
+    top: calc(45% - 140px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: auto;
+    color: #fff;
+}
+
+.text h2{
+    font-weight: 100;
+    font-size: 6.5rem;
+    line-height: 1.2;
+}
+
+.text h1{
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.five-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.six-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.seven-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 9;
+    top: 80%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.eight-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 140%;
+}
+
+.nine-img{
+    position: absolute;
+    background-size: cover;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 140%;
+}
+
+.vignette{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: radial-gradient(
+        ellipse at center, 
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.7)
+    );
+    pointer-events: none;
+}
+
+@media (max-width: 1100px){
+    .text h1{
+        font-size: 5.8rem;
+    }
+    .text h2{
+        font-size: 4.7rem;
+    }
+}
+
+@media (max-width: 725px){
+    .text h1{
+        font-size: 5rem;
+        line-height: 1.5;
+    }
+    .text h2{
+        font-size: 4.1rem;
+        line-height: 1.5;
+    }
+    header nav{
+        padding: 0 1rem;
+    }
+    .logo{
+        width: 75px;
+    }
+    header ul a{
+        font-size: 0.73rem;
+        padding: 0 0.9rem;
+    }
+    .search a{
+        font-size: 0.85rem;
+        padding: 0 1.8rem;
+    }
+    .hamburguer{
+        padding-left: 0.9rem;
+    }
+    .hamburguer a{
+        height: 30px;
+        width: 30px;
+    }
+    .fondo-img{
+        width: initial;
+        height: 120vh;
+    }
+    .one-img{
+        width: initial;
+        height: 100vh;
+    }
+    .two-img{
+        width: initial;
+        height: 100vh;
+    }
+    .three-img{
+        width: initial;
+        height: 100vh;
+    }
+    .four-img{
+        width: initial;
+        height: 100vh;
+    }
+    .five-img{
+        width: initial;
+        height: 100vh;
+    }
+    .six-img{
+        width: initial;
+        height: 100vh;
+    }
+    .seven-img{
+        width: initial;
+        height: 100vh;
+    }
+    .eight-img{
+        width: initial;
+        height: 100vh;
+    }
+    .nine-img{
+        width: initial;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 520px){
+    .text h1{
+        font-size: 3.3rem;
+    }
+    .text h2{
+        font-size: 2.6rem;
+    }
+}
